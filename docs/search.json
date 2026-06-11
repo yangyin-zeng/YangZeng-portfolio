@@ -11,13 +11,55 @@
     "href": "aboutme.html",
     "title": "About me",
     "section": "",
-    "text": "Add some text and a figure describing myself.\nFor details, see the instructions."
+    "text": "My name is Yang Zeng. I am currently studying biology and developing my skills in data analysis, programming, and reproducible research.\n\n\n\nI am interested in biology, immunology, infectious disease, and how data analysis can help answer biological and public health questions.\n\n\n\nI have some experience using R and RStudio/Positron. I am currently learning more about Quarto, GitHub, data visualization, data cleaning, and reproducible workflows.\n\n\n\nI want to be able to connect biology with computational tools, especially when I can use data to help explain complex biological systems.\n\n\n\nOne interesting thing about me is that I love reading and photography, especially for birds and other wildlifes."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "My website and data analysis portfolio",
+    "title": "Yang Zeng website and data analysis portfolio",
     "section": "",
-    "text": "Feel free to change the text below any way you want 😁!\n\nHello\n\nAnd hello again\nWelcome to my website and data analysis portfolio.\n\nPlease use the Menu Bar above to look around.\nHave fun!"
+    "text": "Hi there\nHi, my name is Yang Zeng. This website is my portfolio for Modern Applied Data Analysis.\nHere I will collect course work, data analysis exercises, and projects that show my progress using R, Quarto, GitHub, and reproducible data analysis workflows.\n\nPlease use the Menu Bar above to look around.\nHave fun!"
+  },
+  {
+    "objectID": "aboutme.html#background",
+    "href": "aboutme.html#background",
+    "title": "About me",
+    "section": "Background",
+    "text": "Background\nMy name is Yang Zeng. I am currently studying biology and developing my skills in data analysis, programming, and reproducible research."
+  },
+  {
+    "objectID": "aboutme.html#research-and-academic-interests",
+    "href": "aboutme.html#research-and-academic-interests",
+    "title": "About me",
+    "section": "Research and Academic Interests",
+    "text": "Research and Academic Interests\nI am interested in biology, immunology, infectious disease, and how data analysis can help answer biological and public health questions."
+  },
+  {
+    "objectID": "aboutme.html#data-analysis-experience",
+    "href": "aboutme.html#data-analysis-experience",
+    "title": "About me",
+    "section": "Data Analysis Experience",
+    "text": "Data Analysis Experience\nI have some experience using R and RStudio/Positron. I am currently learning more about Quarto, GitHub, data visualization, data cleaning, and reproducible workflows."
+  },
+  {
+    "objectID": "aboutme.html#what-i-hope-to-learn",
+    "href": "aboutme.html#what-i-hope-to-learn",
+    "title": "About me",
+    "section": "What I Hope to Learn",
+    "text": "What I Hope to Learn\nI want to be able to connect biology with computational tools, especially when I can use data to help explain complex biological systems."
+  },
+  {
+    "objectID": "aboutme.html#something-interesting-about-me",
+    "href": "aboutme.html#something-interesting-about-me",
+    "title": "About me",
+    "section": "Something Interesting About Me",
+    "text": "Something Interesting About Me\nOne interesting thing about me is that I love reading and photography, especially for birds and other wildlifes."
+  },
+  {
+    "objectID": "aboutme.html#a-data-analysis-resource-i-like",
+    "href": "aboutme.html#a-data-analysis-resource-i-like",
+    "title": "About me",
+    "section": "",
+    "text": "I found this data visualization/resource interesting: [put your link here].\nI think it is interesting because it shows how data can be turned into a clear story, which is something I hope to improve in this course."
   }
 ]

@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "YOURNAME Data Analysis Portfolio"
+  title: "Yang Zeng's Data Analysis Portfolio"
   navbar:
     left:
       - text: "About Me"
@@ -14,10 +14,10 @@ website:
             file: starter-analysis-exercise/starter-analysis-exercise.qmd
     right:
       - icon: github 
-        href: URL-TO-THIS-REPOSITORY-HERE        
+        href: https://github.com/yangyin-zeng/YangZeng-portfolio.git      
 format:
   html:
-    theme: cosmo
+    theme: journal
     highlight: zenburn
     css: styles.css
     toc: FALSE
