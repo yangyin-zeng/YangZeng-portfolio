@@ -6,7 +6,7 @@ title: "About me"
 
 ## Background
 
-My name is Yang Zeng. I am currently studying biology and developing my skills in data analysis, programming, and reproducible research.
+My name is Yangyin Zeng. I am currently studying biology and developing my skills in data analysis, programming, and reproducible research.
 
 ## Research and Academic Interests
 
@@ -23,5 +23,5 @@ I have some experience using R and RStudio/Positron. I am currently learning mor
 
 ## Something Interesting About Me
 
-One interesting thing about me is that I love reading and photography, especially for birds and other wildlifes.
+One interesting thing about me is that I love reading and photography, especially for birds and other wildlife.
 

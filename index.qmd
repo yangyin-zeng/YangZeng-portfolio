@@ -1,12 +1,12 @@
 ---
-title: "Yang Zeng website and data analysis portfolio"
+title: "Yangyin Zeng's website and data analysis portfolio"
 ---
 
 
 # Hi there
 
 
-Hi, my name is Yang Zeng. This website is my portfolio for Modern Applied Data Analysis.
+Hi, my name is Yangyin Zeng. This website is my portfolio for Modern Applied Data Analysis.
 
 Here I will collect course work, data analysis exercises, and projects that show my progress using R, Quarto, GitHub, and reproducible data analysis workflows.
 
