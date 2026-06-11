@@ -11,7 +11,7 @@
     "href": "aboutme.html",
     "title": "About me",
     "section": "",
-    "text": "My name is Yang Zeng. I am currently studying biology and developing my skills in data analysis, programming, and reproducible research.\n\n\n\nI am interested in biology, immunology, infectious disease, and how data analysis can help answer biological and public health questions.\n\n\n\nI have some experience using R and RStudio/Positron. I am currently learning more about Quarto, GitHub, data visualization, data cleaning, and reproducible workflows.\n\n\n\nI want to be able to connect biology with computational tools, especially when I can use data to help explain complex biological systems.\n\n\n\nOne interesting thing about me is that I love reading and photography, especially for birds and other wildlifes."
+    "text": "{length=“300px”}"
   },
   {
     "objectID": "index.html",
