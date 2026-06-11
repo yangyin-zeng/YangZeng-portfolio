@@ -7,20 +7,6 @@
     "text": "Placeholder file for a future exercise."
   },
   {
-    "objectID": "aboutme.html",
-    "href": "aboutme.html",
-    "title": "About me",
-    "section": "",
-    "text": "{length=“300px”}"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Yang Zeng website and data analysis portfolio",
-    "section": "",
-    "text": "Hi there\nHi, my name is Yang Zeng. This website is my portfolio for Modern Applied Data Analysis.\nHere I will collect course work, data analysis exercises, and projects that show my progress using R, Quarto, GitHub, and reproducible data analysis workflows.\n\nPlease use the Menu Bar above to look around.\nHave fun!"
-  },
-  {
     "objectID": "aboutme.html#background",
     "href": "aboutme.html#background",
     "title": "About me",
@@ -56,10 +42,10 @@
     "text": "Something Interesting About Me\nOne interesting thing about me is that I love reading and photography, especially for birds and other wildlifes."
   },
   {
-    "objectID": "aboutme.html#a-data-analysis-resource-i-like",
-    "href": "aboutme.html#a-data-analysis-resource-i-like",
-    "title": "About me",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Yang Zeng website and data analysis portfolio",
     "section": "",
-    "text": "I found this data visualization/resource interesting: [put your link here].\nI think it is interesting because it shows how data can be turned into a clear story, which is something I hope to improve in this course."
+    "text": "Hi there\nHi, my name is Yang Zeng. This website is my portfolio for Modern Applied Data Analysis.\nHere I will collect course work, data analysis exercises, and projects that show my progress using R, Quarto, GitHub, and reproducible data analysis workflows.\n\nPlease use the Menu Bar above to look around.\nHave fun!"
   }
 ]
