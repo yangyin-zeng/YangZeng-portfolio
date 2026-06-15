@@ -48,8 +48,9 @@ I am building skills in data cleaning, visualization, version control, and commu
 ::: {.project-card}
 ### Starter Analysis Exercise
 
-A first space for course analysis work, with more detail to be added as projects develop.
+A beginner R analysis using the `gapminder` data from `dslabs` to explore relationships between life expectancy, infant mortality, and population in African countries.
 
 [Open project](starter-analysis-exercise/starter-analysis-exercise.qmd){.project-link}
+[View source file](https://github.com/yangyin-zeng/starter-analysis-exercise/blob/master/starter_analysis_exercise.Rmd){.project-link}
 :::
 :::

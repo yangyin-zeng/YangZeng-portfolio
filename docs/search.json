@@ -4,14 +4,14 @@
     "href": "starter-analysis-exercise/starter-analysis-exercise.html",
     "title": "Starter Analysis Exercise",
     "section": "",
-    "text": "This page is ready to document the first analysis exercise, including the question, data source, methods, visuals, and what the results show."
+    "text": "This exercise uses the gapminder data from the dslabs R package to practice data selection, visualization, missing-data checks, and simple linear modeling.\nView the R Markdown source file"
   },
   {
-    "objectID": "starter-analysis-exercise/starter-analysis-exercise.html#planned-structure",
-    "href": "starter-analysis-exercise/starter-analysis-exercise.html#planned-structure",
+    "objectID": "starter-analysis-exercise/starter-analysis-exercise.html#project-summary",
+    "href": "starter-analysis-exercise/starter-analysis-exercise.html#project-summary",
     "title": "Starter Analysis Exercise",
-    "section": "Planned Structure",
-    "text": "Planned Structure\n\n\nQuestion\nWhat biological, health, or data analysis question does the project investigate?\n\n\nMethods\nWhat data cleaning, visualization, modeling, or reproducible workflow steps are used?\n\n\nResults\nWhat patterns, findings, limitations, and next steps come out of the analysis?"
+    "section": "Project Summary",
+    "text": "Project Summary\n\n\nQuestion\nHow are infant mortality, population, and life expectancy related among African countries?\n\n\nMethods\nThe analysis filters African country data, compares selected variables with scatterplots, checks missing infant mortality values by year, and fits simple linear models for the year 2000.\n\n\nResults\nThe plots suggest that higher infant mortality is associated with lower life expectancy, which is then tested with a simple linear model."
   },
   {
     "objectID": "aboutme.html",
@@ -67,6 +67,6 @@
     "href": "index.html#current-work",
     "title": "Yangyin Zeng",
     "section": "Current Work",
-    "text": "Current Work\n\n\nStarter Analysis Exercise\nA first space for course analysis work, with more detail to be added as projects develop.\nOpen project"
+    "text": "Current Work\n\n\nStarter Analysis Exercise\nA beginner R analysis using the gapminder data from dslabs to explore relationships between life expectancy, infant mortality, and population in African countries.\nOpen project View source file"
   }
 ]
