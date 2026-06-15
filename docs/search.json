@@ -2,16 +2,23 @@
   {
     "objectID": "starter-analysis-exercise/starter-analysis-exercise.html",
     "href": "starter-analysis-exercise/starter-analysis-exercise.html",
-    "title": "Future Exercise",
+    "title": "Starter Analysis Exercise",
     "section": "",
-    "text": "Placeholder file for a future exercise."
+    "text": "This page is ready to document the first analysis exercise, including the question, data source, methods, visuals, and what the results show."
   },
   {
-    "objectID": "aboutme.html#background",
-    "href": "aboutme.html#background",
+    "objectID": "starter-analysis-exercise/starter-analysis-exercise.html#planned-structure",
+    "href": "starter-analysis-exercise/starter-analysis-exercise.html#planned-structure",
+    "title": "Starter Analysis Exercise",
+    "section": "Planned Structure",
+    "text": "Planned Structure\n\n\nQuestion\nWhat biological, health, or data analysis question does the project investigate?\n\n\nMethods\nWhat data cleaning, visualization, modeling, or reproducible workflow steps are used?\n\n\nResults\nWhat patterns, findings, limitations, and next steps come out of the analysis?"
+  },
+  {
+    "objectID": "aboutme.html",
+    "href": "aboutme.html",
     "title": "About me",
-    "section": "Background",
-    "text": "Background\nMy name is Yangyin Zeng. I am currently studying biology and developing my skills in data analysis, programming, and reproducible research."
+    "section": "",
+    "text": "My name is Yangyin Zeng. I am currently studying biology and developing my skills in data analysis, programming, and reproducible research.\nI am especially interested in using computational tools to make biological and public health questions easier to explore, explain, and share."
   },
   {
     "objectID": "aboutme.html#research-and-academic-interests",
@@ -32,20 +39,34 @@
     "href": "aboutme.html#what-i-hope-to-learn",
     "title": "About me",
     "section": "What I Hope to Learn",
-    "text": "What I Hope to Learn\nI want to be able to connect biology with computational tools, especially when I can use data to help explain complex biological systems."
+    "text": "What I Hope to Learn\nI want to connect biology with computational tools, especially when I can use data to help explain complex biological systems."
   },
   {
     "objectID": "aboutme.html#something-interesting-about-me",
     "href": "aboutme.html#something-interesting-about-me",
     "title": "About me",
     "section": "Something Interesting About Me",
-    "text": "Something Interesting About Me\nOne interesting thing about me is that I love reading and photography, especially for birds and other wildlife."
+    "text": "Something Interesting About Me\nOne interesting thing about me is that I love reading and photography, especially for birds and other wildlife.\n\nPortfolio Direction\nThis site will continue to grow with course exercises, data visualizations, and projects that show my progress in applied data analysis."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Yangyin Zeng’s website and data analysis portfolio",
+    "title": "Yangyin Zeng",
     "section": "",
-    "text": "Hi there\nHi, my name is Yangyin Zeng. This website is my portfolio for Modern Applied Data Analysis.\nHere I will collect course work, data analysis exercises, and projects that show my progress using R, Quarto, GitHub, and reproducible data analysis workflows.\n\nPlease use the Menu Bar above to look around.\nHave fun!"
+    "text": "I am studying biology and learning how to use R, Quarto, GitHub, and reproducible workflows to turn biological questions into clear data stories.\n\nAbout me View projects"
+  },
+  {
+    "objectID": "index.html#portfolio-focus",
+    "href": "index.html#portfolio-focus",
+    "title": "Yangyin Zeng",
+    "section": "Portfolio Focus",
+    "text": "Portfolio Focus\n\n\nBiological Questions\nI am interested in biology, immunology, infectious disease, and the way data can help explain complex living systems.\n\n\nReproducible Analysis\nThis portfolio collects coursework and exercises created with Quarto, R, GitHub, and transparent analysis workflows.\n\n\nGrowing Toolkit\nI am building skills in data cleaning, visualization, version control, and communicating results for scientific audiences."
+  },
+  {
+    "objectID": "index.html#current-work",
+    "href": "index.html#current-work",
+    "title": "Yangyin Zeng",
+    "section": "Current Work",
+    "text": "Current Work\n\n\nStarter Analysis Exercise\nA first space for course analysis work, with more detail to be added as projects develop.\nOpen project"
   }
 ]
