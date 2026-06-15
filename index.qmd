@@ -1,16 +1,55 @@
 ---
-title: "Yangyin Zeng's website and data analysis portfolio"
+title: "Yangyin Zeng"
+subtitle: "Biology student building practical data analysis skills"
 ---
 
+::: {.hero}
+::: {.hero-copy}
+# Yangyin Zeng
 
-# Hi there
+I am studying biology and learning how to use R, Quarto, GitHub, and reproducible workflows to turn biological questions into clear data stories.
 
+:::{.hero-actions}
+[About me](aboutme.qmd){.button .primary}
+[View projects](starter-analysis-exercise/starter-analysis-exercise.qmd){.button}
+:::
+:::
 
-Hi, my name is Yangyin Zeng. This website is my portfolio for Modern Applied Data Analysis.
+::: {.hero-photo}
+![](images/profile.jpg){fig-alt="Portrait of Yangyin Zeng"}
+:::
+:::
 
-Here I will collect course work, data analysis exercises, and projects that show my progress using R, Quarto, GitHub, and reproducible data analysis workflows.
+## Portfolio Focus
 
+::: {.feature-grid}
+::: {.feature-card}
+### Biological Questions
 
-* Please use the `Menu Bar` above to look around.
-* Have fun!
+I am interested in biology, immunology, infectious disease, and the way data can help explain complex living systems.
+:::
 
+::: {.feature-card}
+### Reproducible Analysis
+
+This portfolio collects coursework and exercises created with Quarto, R, GitHub, and transparent analysis workflows.
+:::
+
+::: {.feature-card}
+### Growing Toolkit
+
+I am building skills in data cleaning, visualization, version control, and communicating results for scientific audiences.
+:::
+:::
+
+## Current Work
+
+::: {.project-list}
+::: {.project-card}
+### Starter Analysis Exercise
+
+A first space for course analysis work, with more detail to be added as projects develop.
+
+[Open project](starter-analysis-exercise/starter-analysis-exercise.qmd){.project-link}
+:::
+:::

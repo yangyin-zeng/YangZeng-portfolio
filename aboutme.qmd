@@ -2,11 +2,19 @@
 title: "About me"
 ---
 
-![](images/profile.jpg){width="300px"}
+::: {.about-header}
+::: {.about-image}
+![](images/profile.jpg){fig-alt="Portrait of Yangyin Zeng"}
+:::
 
-## Background
+::: {.about-intro}
+# Yangyin Zeng
 
 My name is Yangyin Zeng. I am currently studying biology and developing my skills in data analysis, programming, and reproducible research.
+
+I am especially interested in using computational tools to make biological and public health questions easier to explore, explain, and share.
+:::
+:::
 
 ## Research and Academic Interests
 
@@ -18,10 +26,16 @@ I have some experience using R and RStudio/Positron. I am currently learning mor
 
 ## What I Hope to Learn
 
- I want to be able to connect biology with computational tools, especially when I can use data to help explain complex biological systems.
+I want to connect biology with computational tools, especially when I can use data to help explain complex biological systems.
 
 
 ## Something Interesting About Me
 
 One interesting thing about me is that I love reading and photography, especially for birds and other wildlife.
+
+::: {.note-panel}
+### Portfolio Direction
+
+This site will continue to grow with course exercises, data visualizations, and projects that show my progress in applied data analysis.
+:::
 

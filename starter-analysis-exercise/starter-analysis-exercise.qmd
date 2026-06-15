@@ -1,5 +1,30 @@
 ---
-title: "Future Exercise"
+title: "Starter Analysis Exercise"
+subtitle: "A placeholder for upcoming Modern Applied Data Analysis work"
 ---
 
-Placeholder file for a future exercise.
+::: {.project-hero}
+This page is ready to document the first analysis exercise, including the question, data source, methods, visuals, and what the results show.
+:::
+
+## Planned Structure
+
+::: {.feature-grid}
+::: {.feature-card}
+### Question
+
+What biological, health, or data analysis question does the project investigate?
+:::
+
+::: {.feature-card}
+### Methods
+
+What data cleaning, visualization, modeling, or reproducible workflow steps are used?
+:::
+
+::: {.feature-card}
+### Results
+
+What patterns, findings, limitations, and next steps come out of the analysis?
+:::
+:::
