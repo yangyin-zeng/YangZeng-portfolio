@@ -11,7 +11,7 @@ I am studying biology and learning how to use R, Quarto, GitHub, and reproducibl
 
 :::{.hero-actions}
 [About me](aboutme.qmd){.button .primary}
-[View projects](starter-analysis-exercise/starter-analysis-exercise.qmd){.button}
+[View latest project](complex_data_type_analysis/complex_data_type_analysis.qmd){.button}
 :::
 :::
 
@@ -45,6 +45,15 @@ I am building skills in data cleaning, visualization, version control, and commu
 ## Current Work
 
 ::: {.project-list}
+::: {.project-card}
+### Complex Data Type Analysis
+
+A Quarto exercise using `Biostrings` to read immune-related protein FASTA sequences, calculate sequence lengths and amino acid composition, group residues by simple properties, and make exploratory plots.
+
+[Open project](complex_data_type_analysis/complex_data_type_analysis.qmd){.project-link}
+[View source file](https://github.com/yangyin-zeng/YangZeng-portfolio/blob/main/complex_data_type_analysis/complex_data_type_analysis.qmd){.project-link}
+:::
+
 ::: {.project-card}
 ### Starter Analysis Exercise
 
