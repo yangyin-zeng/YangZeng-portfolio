@@ -1,0 +1,280 @@
+---
+title: "Complex Data Type Exercise: Immune Protein Sequences"
+subtitle: "A beginner-friendly Biostrings analysis of FASTA protein data"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+execute:
+  warning: false
+  message: false
+---
+
+## Goal
+
+In this exercise, we will work with protein sequences stored in FASTA format.
+FASTA files are common in biology because they can store one or many DNA, RNA,
+or protein sequences in a simple text format.
+
+We will use the `Biostrings` package to:
+
+- read immune-related protein sequences from a FASTA file
+- calculate the length of each protein sequence
+- count amino acids in each sequence
+- group amino acids by simple chemical property categories
+- make exploratory plots
+
+This is a practice analysis. The FASTA file below contains a small set of
+immune-related protein sequence fragments so the code can run without
+downloading external data.
+
+## Load Packages
+
+```{r}
+# Biostrings is a Bioconductor package for reading and working with biological
+# sequences. We use it here because protein FASTA files are complex data, not
+# ordinary rectangular spreadsheets.
+
+# If Biostrings is not installed yet, run these lines once in the Console:
+# install.packages("BiocManager")
+# BiocManager::install("Biostrings")
+
+library(Biostrings)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+```
+
+## Create a Small Practice FASTA File
+
+```{r}
+# In a real project, this path would point to a FASTA file downloaded from a
+# database such as UniProt or NCBI.
+#
+# For this exercise, we create a small FASTA file ourselves. This makes the
+# exercise reproducible because everyone starts with the same input file.
+
+fasta_file <- "immune_protein_fragments.fasta"
+
+# The lines that start with ">" are FASTA headers. Each header gives a name for
+# the sequence that follows it.
+#
+# The other lines contain amino acid letters. For example:
+# A = alanine, C = cysteine, D = aspartic acid, and so on.
+
+practice_fasta <- c(
+  ">IL2_fragment cytokine involved in T cell signaling",
+  "MYRMQLLSCIALSLALVTNSAPTSSSTKKTQLQLEHLLLDLQMILNGINNYKNPKLTRMLTFKFYMPKKATELKHLQCLEEELKPLEEVLNLAQSKNFHLRPRDLISNINVIVLELKGSETTFMCEYADETATIVEFLNRWITFCQSIISTLT",
+  ">IFNG_fragment cytokine involved in macrophage activation",
+  "MQDPYVKEAENLKKYFNAGHSDVADNGTLFLGILKNWKEESDRKIMQSQIVSFYFKLFKNFKDDQSIQKSVETIKEDMNVKFFNSNKKKRDDFEKLTNYSVTDLNVQRKAIHELIQVMAELSPAAKTGKRKRSQMLFRGRRASQ",
+  ">TNF_fragment inflammatory cytokine",
+  "MSTESMIRDVELAEEALPKKTGGPQGSRRCLFLSLFSFLIVAGATTLFCLLHFGVIGPQREEFPRDLSLISPLAQAVRSSSRTPSDKPVAHVVANPQAEGQLQWLNRRANALLANGVELRDNQLVVPSEGLYLIYSQVLFKGQGCPSTHVLLTHTISRIAVSYQTKVNLLSAIKSPCQRETPEGAEAKPWYEPIYLGGVFQLEKGDRLSAEINRPDYLDFAESGQVYFGIIAL",
+  ">CD4_fragment T cell surface receptor",
+  "MNRGVPFRHLLLVLQLALLPAATQGKKVVLGKKGDTVELTCTASQKKSIQFHWKNSNQIKILGNQGSFLTKGPSKLNDRADSRRSLWDQGNFPLIIRLKIEDSDTYICEVEDQKEEVQLLVFGLTANSDTHLLQGQSLTLTLESPPGSSPSVQCRSPRGKNIQGGKTLSVSQLELQDSGTWTCTVLQNQKKVEFKIDIVVLAFQKASSIVYKKEGEQVEFSFPLAFTVEKLTGSGELWWQAERASSSKSWITFDLKNKEVSVKRVTQDPKLQMGKKLPLHLTLPQALPQYAGSGNLTLALEAKTGKLHQEVNLVVMRATQLQKNLTCEVWGPTSPKLMLSLKLENKEAKVSKREKAVWVLNPEAGMWQCLLSDSGQVLLESNIKVLPTWSTPVQPMALIVLGGVAGLLLFIGLGIFFCVRCRHRRRQAERMSQIKRLLSEKKTCQCPHRFQKTCSPI",
+  ">CXCL8_fragment chemokine that recruits neutrophils",
+  "MTSKLAVALLAAFLISAALCEGAVLPRSAKELRCQCIKTYSKPFHPKFIKELRVIESGPHCANTEIIVKLSDGRELCLDPKENWVQRVVEKFLKRAENS"
+)
+
+# Only write the file if it does not already exist. This avoids overwriting a
+# file if you later replace it with your own sequences.
+if (!file.exists(fasta_file)) {
+  writeLines(practice_fasta, fasta_file)
+}
+```
+
+## Read the FASTA File with Biostrings
+
+```{r}
+# readAAStringSet() reads amino acid sequences from a FASTA file.
+# The result is an AAStringSet object, which is a Biostrings object designed for
+# protein sequences.
+
+immune_proteins <- readAAStringSet(fasta_file)
+
+# Print the object so we can see how many sequences were read and their names.
+immune_proteins
+```
+
+## Calculate Protein Sequence Lengths
+
+```{r}
+# width() gives the number of amino acids in each protein sequence.
+
+protein_lengths <- tibble(
+  protein = names(immune_proteins),
+  length_aa = width(immune_proteins)
+)
+
+protein_lengths
+```
+
+```{r}
+# A simple bar plot helps us compare sequence lengths.
+
+ggplot(protein_lengths, aes(x = reorder(protein, length_aa), y = length_aa)) +
+  geom_col(fill = "steelblue") +
+  coord_flip() +
+  labs(
+    title = "Protein Sequence Lengths",
+    x = "Protein sequence",
+    y = "Length in amino acids"
+  ) +
+  theme_minimal()
+```
+
+## Count Amino Acids
+
+```{r}
+# The standard protein alphabet has 20 common amino acid letters.
+
+amino_acids <- c(
+  "A", "R", "N", "D", "C",
+  "Q", "E", "G", "H", "I",
+  "L", "K", "M", "F", "P",
+  "S", "T", "W", "Y", "V"
+)
+
+# alphabetFrequency() counts the letters in each sequence.
+# baseOnly = TRUE keeps the output focused on standard amino acid letters.
+
+aa_counts_matrix <- alphabetFrequency(
+  immune_proteins,
+  baseOnly = TRUE
+)
+
+# Convert the matrix to a data frame because data frames are easier to plot.
+
+aa_counts <- as.data.frame(aa_counts_matrix) |>
+  select(all_of(amino_acids)) |>
+  mutate(protein = names(immune_proteins)) |>
+  relocate(protein)
+
+aa_counts
+```
+
+```{r}
+# Change from wide format to long format.
+# Long format is usually easier for ggplot because one row represents one
+# protein and one amino acid.
+
+aa_counts_long <- aa_counts |>
+  pivot_longer(
+    cols = all_of(amino_acids),
+    names_to = "amino_acid",
+    values_to = "count"
+  )
+
+aa_counts_long
+```
+
+```{r}
+# Plot amino acid counts for each protein.
+
+ggplot(aa_counts_long, aes(x = amino_acid, y = count)) +
+  geom_col(fill = "darkseagreen4") +
+  facet_wrap(~ protein) +
+  labs(
+    title = "Amino Acid Counts by Protein",
+    x = "Amino acid",
+    y = "Count"
+  ) +
+  theme_minimal()
+```
+
+## Calculate Amino Acid Percentages
+
+```{r}
+# Raw counts are useful, but longer proteins naturally have larger counts.
+# Percentages make sequences of different lengths easier to compare.
+
+aa_percent_long <- aa_counts_long |>
+  left_join(protein_lengths, by = "protein") |>
+  mutate(percent = 100 * count / length_aa)
+
+aa_percent_long
+```
+
+```{r}
+# This plot shows the percent of each amino acid in each sequence.
+
+ggplot(aa_percent_long, aes(x = amino_acid, y = percent)) +
+  geom_col(fill = "mediumpurple4") +
+  facet_wrap(~ protein) +
+  labs(
+    title = "Amino Acid Composition by Protein",
+    x = "Amino acid",
+    y = "Percent of sequence"
+  ) +
+  theme_minimal()
+```
+
+## Group Amino Acids by Simple Properties
+
+```{r}
+# Amino acids can be grouped in many different ways.
+# Here we use a simple beginner-friendly grouping.
+#
+# This grouping is only a broad summary. It is useful for exploration, but it
+# does not replace detailed biochemical analysis.
+
+aa_properties <- tibble(
+  amino_acid = amino_acids,
+  property_group = case_when(
+    amino_acid %in% c("D", "E") ~ "Acidic",
+    amino_acid %in% c("R", "H", "K") ~ "Basic",
+    amino_acid %in% c("A", "V", "I", "L", "M", "F", "W", "Y", "P") ~ "Hydrophobic",
+    amino_acid %in% c("S", "T", "N", "Q", "C", "G") ~ "Polar or small",
+    TRUE ~ "Other"
+  )
+)
+
+aa_properties
+```
+
+```{r}
+# Join the property labels to the amino acid count table.
+# Then add up counts within each protein and property group.
+
+property_counts <- aa_counts_long |>
+  left_join(aa_properties, by = "amino_acid") |>
+  group_by(protein, property_group) |>
+  summarise(
+    count = sum(count),
+    .groups = "drop"
+  ) |>
+  left_join(protein_lengths, by = "protein") |>
+  mutate(percent = 100 * count / length_aa)
+
+property_counts
+```
+
+```{r}
+# A stacked bar plot gives a quick comparison of broad residue properties.
+
+ggplot(property_counts, aes(x = protein, y = percent, fill = property_group)) +
+  geom_col() +
+  coord_flip() +
+  labs(
+    title = "Residue Property Groups",
+    x = "Protein sequence",
+    y = "Percent of sequence",
+    fill = "Property group"
+  ) +
+  theme_minimal()
+```
+
+## Simple Questions to Consider
+
+1. Which protein sequence is longest in this small example?
+2. Which amino acids are most common across the proteins?
+3. Do any proteins have a higher percentage of basic residues?
+4. Do any proteins have a higher percentage of hydrophobic residues?
+5. How might the results change if we used full-length reference sequences
+   instead of short practice sequences?
+
+## What This Exercise Shows
+
+This analysis treats protein sequences as a complex data type. Unlike a CSV
+file, a FASTA file is not already arranged as rows and columns. `Biostrings`
+helps us read the sequences correctly, and then we can convert selected results
+such as lengths and amino acid counts into tidy tables for plotting.
