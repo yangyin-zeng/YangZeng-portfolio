@@ -11,7 +11,7 @@ I am studying biology and learning how to use R, Quarto, GitHub, and reproducibl
 
 :::{.hero-actions}
 [About me](aboutme.qmd){.button .primary}
-[View latest project](complex_data_type_analysis/complex_data_type_analysis.qmd){.button}
+[View current project](cdcdata_exercise/cdcdata_exercise.Rmd){.button}
 :::
 :::
 
@@ -45,6 +45,14 @@ I am building skills in data cleaning, visualization, version control, and commu
 ## Current Work
 
 ::: {.project-list}
+::: {.project-card}
+### CDC Data Processing Exercise
+
+An analysis of CDC influenza vaccination coverage that cleans and validates more than 235,000 observations, examines missing data, and compares end-of-season coverage across age groups, flu seasons, and states.
+
+[Open project](cdcdata_exercise/cdcdata_exercise.Rmd){.project-link}
+:::
+
 ::: {.project-card}
 ### Complex Data Type Analysis
 

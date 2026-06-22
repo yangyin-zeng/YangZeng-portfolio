@@ -1,0 +1,60 @@
+---
+title: "CDC Data Processing Exercise"
+subtitle: "Influenza Vaccination Coverage"
+author: "Yang Zeng"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+## Research question
+
+How does influenza vaccination coverage vary across age groups, geography, and flu seasons?
+
+## Data processing
+
+The processing script imports the CDC data, converts unreported values to missing values, parses confidence intervals, validates numeric ranges, and creates comparable national and state subsets.
+
+```{r setup, include=FALSE}
+knitr::opts_knit$set(root.dir = normalizePath("../.."))
+```
+
+```{r load-data, include=FALSE}
+source(
+  "YangZeng-portfolio/cdcdata_exercise/cdcdata_exercise.R",
+  local = knitr::knit_global()
+)
+```
+
+## Missing data
+
+The table reports missing vaccination estimates within each season, geography type, and demographic dimension.
+
+```{r missing-data}
+missing_summary
+```
+
+## National estimates by age group
+
+This analysis uses national seasonal-influenza estimates from May, the end-of-season observation. Keeping the vaccine, geography, month, and dimension consistent prevents unrelated observations from being averaged together.
+
+```{r national-summary}
+national_age_summary
+```
+
+```{r national-age-plot, fig.width=10, fig.height=12}
+national_age_plot
+```
+
+## State estimates
+
+State records are identified using two-character FIPS codes. The summary describes the median and interquartile range across reporting states.
+
+```{r state-summary}
+state_season_summary
+```
+
+```{r state-distribution-plot, fig.width=10, fig.height=6}
+state_distribution_plot
+```

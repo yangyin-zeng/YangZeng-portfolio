@@ -12,6 +12,8 @@ website:
         menu:
           - text: "Starter Analysis Exercise"
             file: starter-analysis-exercise/starter-analysis-exercise.qmd
+          - text: "CDC Data Processing Exercise"
+            file: cdcdata_exercise/cdcdata_exercise.Rmd
           - text: "Complex Data Type Analysis"
             file: complex_data_type_analysis/complex_data_type_analysis.qmd
     right:

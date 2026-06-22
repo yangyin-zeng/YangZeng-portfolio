@@ -39,7 +39,7 @@
     "href": "complex_data_type_analysis/complex_data_type_analysis.html#create-a-small-practice-fasta-file",
     "title": "Complex Data Type Exercise: Immune Protein Sequences",
     "section": "Create a Small Practice FASTA File",
-    "text": "Create a Small Practice FASTA File\n\n# In a real project, this path would point to a FASTA file downloaded from a\n# database such as UniProt or NCBI.\n#\n# For this exercise, we create a small FASTA file ourselves. This makes the\n# exercise reproducible because everyone starts with the same input file.\n\nfasta_file &lt;- \"immune_protein_fragments.fasta\"\n\n# The lines that start with \"&gt;\" are FASTA headers. Each header gives a name for\n# the sequence that follows it.\n#\n# The other lines contain amino acid letters. For example:\n# A = alanine, C = cysteine, D = aspartic acid, and so on.\n\npractice_fasta &lt;- c(\n  \"&gt;IL2_fragment cytokine involved in T cell signaling\",\n  \"MYRMQLLSCIALSLALVTNSAPTSSSTKKTQLQLEHLLLDLQMILNGINNYKNPKLTRMLTFKFYMPKKATELKHLQCLEEELKPLEEVLNLAQSKNFHLRPRDLISNINVIVLELKGSETTFMCEYADETATIVEFLNRWITFCQSIISTLT\",\n  \"&gt;IFNG_fragment cytokine involved in macrophage activation\",\n  \"MQDPYVKEAENLKKYFNAGHSDVADNGTLFLGILKNWKEESDRKIMQSQIVSFYFKLFKNFKDDQSIQKSVETIKEDMNVKFFNSNKKKRDDFEKLTNYSVTDLNVQRKAIHELIQVMAELSPAAKTGKRKRSQMLFRGRRASQ\",\n  \"&gt;TNF_fragment inflammatory cytokine\",\n  \"MSTESMIRDVELAEEALPKKTGGPQGSRRCLFLSLFSFLIVAGATTLFCLLHFGVIGPQREEFPRDLSLISPLAQAVRSSSRTPSDKPVAHVVANPQAEGQLQWLNRRANALLANGVELRDNQLVVPSEGLYLIYSQVLFKGQGCPSTHVLLTHTISRIAVSYQTKVNLLSAIKSPCQRETPEGAEAKPWYEPIYLGGVFQLEKGDRLSAEINRPDYLDFAESGQVYFGIIAL\",\n  \"&gt;CD4_fragment T cell surface receptor\",\n  \"MNRGVPFRHLLLVLQLALLPAATQGKKVVLGKKGDTVELTCTASQKKSIQFHWKNSNQIKILGNQGSFLTKGPSKLNDRADSRRSLWDQGNFPLIIRLKIEDSDTYICEVEDQKEEVQLLVFGLTANSDTHLLQGQSLTLTLESPPGSSPSVQCRSPRGKNIQGGKTLSVSQLELQDSGTWTCTVLQNQKKVEFKIDIVVLAFQKASSIVYKKEGEQVEFSFPLAFTVEKLTGSGELWWQAERASSSKSWITFDLKNKEVSVKRVTQDPKLQMGKKLPLHLTLPQALPQYAGSGNLTLALEAKTGKLHQEVNLVVMRATQLQKNLTCEVWGPTSPKLMLSLKLENKEAKVSKREKAVWVLNPEAGMWQCLLSDSGQVLLESNIKVLPTWSTPVQPMALIVLGGVAGLLLFIGLGIFFCVRCRHRRRQAERMSQIKRLLSEKKTCQCPHRFQKTCSPI\",\n  \"&gt;CXCL8_fragment chemokine that recruits neutrophils\",\n  \"MTSKLAVALLAAFLISAALCEGAVLPRSAKELRCQCIKTYSKPFHPKFIKELRVIESGPHCANTEIIVKLSDGRELCLDPKENWVQRVVEKFLKRAENS\"\n)\n\n# Only write the file if it does not already exist. This avoids overwriting a\n# file if you later replace it with your own sequences.\nif (!file.exists(fasta_file)) {\n  writeLines(practice_fasta, fasta_file)\n}"
+    "text": "Create a Small Practice FASTA File\n\n# In a real project, this path would point to a FASTA file downloaded from a\n# database such as UniProt or NCBI.\n#\n# For this exercise, we create a small FASTA file ourselves. This makes the\n# exercise reproducible (pretty important for the ready workflow lol) because everyone starts with the same input file.\n\nfasta_file &lt;- \"immune_protein_fragments.fasta\"\n\n# The lines that start with \"&gt;\" are FASTA headers. Each header gives a name for\n# the sequence that follows it.\n#\n# The other lines contain amino acid letters. For example:\n# A = alanine, C = cysteine, D = aspartic acid, and so on.\n\npractice_fasta &lt;- c(\n  \"&gt;IL2_fragment cytokine involved in T cell signaling\",\n  \"MYRMQLLSCIALSLALVTNSAPTSSSTKKTQLQLEHLLLDLQMILNGINNYKNPKLTRMLTFKFYMPKKATELKHLQCLEEELKPLEEVLNLAQSKNFHLRPRDLISNINVIVLELKGSETTFMCEYADETATIVEFLNRWITFCQSIISTLT\",\n  \"&gt;IFNG_fragment cytokine involved in macrophage activation\",\n  \"MQDPYVKEAENLKKYFNAGHSDVADNGTLFLGILKNWKEESDRKIMQSQIVSFYFKLFKNFKDDQSIQKSVETIKEDMNVKFFNSNKKKRDDFEKLTNYSVTDLNVQRKAIHELIQVMAELSPAAKTGKRKRSQMLFRGRRASQ\",\n  \"&gt;TNF_fragment inflammatory cytokine\",\n  \"MSTESMIRDVELAEEALPKKTGGPQGSRRCLFLSLFSFLIVAGATTLFCLLHFGVIGPQREEFPRDLSLISPLAQAVRSSSRTPSDKPVAHVVANPQAEGQLQWLNRRANALLANGVELRDNQLVVPSEGLYLIYSQVLFKGQGCPSTHVLLTHTISRIAVSYQTKVNLLSAIKSPCQRETPEGAEAKPWYEPIYLGGVFQLEKGDRLSAEINRPDYLDFAESGQVYFGIIAL\",\n  \"&gt;CD4_fragment T cell surface receptor\",\n  \"MNRGVPFRHLLLVLQLALLPAATQGKKVVLGKKGDTVELTCTASQKKSIQFHWKNSNQIKILGNQGSFLTKGPSKLNDRADSRRSLWDQGNFPLIIRLKIEDSDTYICEVEDQKEEVQLLVFGLTANSDTHLLQGQSLTLTLESPPGSSPSVQCRSPRGKNIQGGKTLSVSQLELQDSGTWTCTVLQNQKKVEFKIDIVVLAFQKASSIVYKKEGEQVEFSFPLAFTVEKLTGSGELWWQAERASSSKSWITFDLKNKEVSVKRVTQDPKLQMGKKLPLHLTLPQALPQYAGSGNLTLALEAKTGKLHQEVNLVVMRATQLQKNLTCEVWGPTSPKLMLSLKLENKEAKVSKREKAVWVLNPEAGMWQCLLSDSGQVLLESNIKVLPTWSTPVQPMALIVLGGVAGLLLFIGLGIFFCVRCRHRRRQAERMSQIKRLLSEKKTCQCPHRFQKTCSPI\",\n  \"&gt;CXCL8_fragment chemokine that recruits neutrophils\",\n  \"MTSKLAVALLAAFLISAALCEGAVLPRSAKELRCQCIKTYSKPFHPKFIKELRVIESGPHCANTEIIVKLSDGRELCLDPKENWVQRVVEKFLKRAENS\"\n)\n\n# Only write the file if it does not already exist. This avoids overwriting a\n# file if you later replace it with your own sequences.\nif (!file.exists(fasta_file)) {\n  writeLines(practice_fasta, fasta_file)\n}"
   },
   {
     "objectID": "complex_data_type_analysis/complex_data_type_analysis.html#read-the-fasta-file-with-biostrings",
@@ -126,11 +126,53 @@
     "text": "Something Interesting About Me\nOne interesting thing about me is that I love reading and photography, especially for birds and other wildlife.\n\nPortfolio Direction\nThis site will continue to grow with course exercises, data visualizations, and projects that show my progress in applied data analysis."
   },
   {
+    "objectID": "cdcdata_exercise/cdcdata_exercise.html",
+    "href": "cdcdata_exercise/cdcdata_exercise.html",
+    "title": "CDC Data Processing Exercise",
+    "section": "",
+    "text": "How does influenza vaccination coverage vary across age groups, geography, and flu seasons?"
+  },
+  {
+    "objectID": "cdcdata_exercise/cdcdata_exercise.html#research-question",
+    "href": "cdcdata_exercise/cdcdata_exercise.html#research-question",
+    "title": "CDC Data Processing Exercise",
+    "section": "",
+    "text": "How does influenza vaccination coverage vary across age groups, geography, and flu seasons?"
+  },
+  {
+    "objectID": "cdcdata_exercise/cdcdata_exercise.html#data-processing",
+    "href": "cdcdata_exercise/cdcdata_exercise.html#data-processing",
+    "title": "CDC Data Processing Exercise",
+    "section": "Data processing",
+    "text": "Data processing\nThe processing script imports the CDC data, converts unreported values to missing values, parses confidence intervals, validates numeric ranges, and creates comparable national and state subsets."
+  },
+  {
+    "objectID": "cdcdata_exercise/cdcdata_exercise.html#missing-data",
+    "href": "cdcdata_exercise/cdcdata_exercise.html#missing-data",
+    "title": "CDC Data Processing Exercise",
+    "section": "Missing data",
+    "text": "Missing data\nThe table reports missing vaccination estimates within each season, geography type, and demographic dimension.\n\nmissing_summary\n\n# A tibble: 99 × 6\n   season  geography_type dimension_type  rows missing_estimates missing_percent\n   &lt;chr&gt;   &lt;chr&gt;          &lt;chr&gt;          &lt;int&gt;             &lt;int&gt;           &lt;dbl&gt;\n 1 2009-10 HHS Regions/N… Age             2156                24          0.0111\n 2 2009-10 HHS Regions/N… Race and Ethn…  1846                87          0.0471\n 3 2009-10 States/Local … Age             9986               387          0.0388\n 4 2009-10 States/Local … Race and Ethn…  8480              1621          0.191 \n 5 2010-11 HHS Regions/N… Age             1320                22          0.0167\n 6 2010-11 HHS Regions/N… Race and Ethn…   440                 6          0.0136\n 7 2010-11 States/Local … Age             6109               433          0.0709\n 8 2010-11 States/Local … Race and Ethn…  2036               270          0.133 \n 9 2011-12 HHS Regions/N… Age             1320                17          0.0129\n10 2011-12 HHS Regions/N… Race and Ethn…   440                 9          0.0205\n# ℹ 89 more rows"
+  },
+  {
+    "objectID": "cdcdata_exercise/cdcdata_exercise.html#national-estimates-by-age-group",
+    "href": "cdcdata_exercise/cdcdata_exercise.html#national-estimates-by-age-group",
+    "title": "CDC Data Processing Exercise",
+    "section": "National estimates by age group",
+    "text": "National estimates by age group\nThis analysis uses national seasonal-influenza estimates from May, the end-of-season observation. Keeping the vaccine, geography, month, and dimension consistent prevents unrelated observations from being averaged together.\n\nnational_age_summary\n\n# A tibble: 77 × 6\n   season  dimension           estimate ci_lower ci_upper sample_size\n   &lt;chr&gt;   &lt;fct&gt;                  &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;       &lt;dbl&gt;\n 1 2009-10 6 Months - 17 Years     43.7     42.8     44.6      149872\n 2 2009-10 50-64 Years             45       44.4     45.6      119754\n 3 2009-10 &gt;=65 Years              69.6     69       70.2      115018\n 4 2009-10 &gt;=6 Months              41.2     40.8     41.6      511357\n 5 2010-11 6 Months - 17 Years     51       50.1     51.9      116799\n 6 2010-11 18-49 Years             30.5     29.9     31.1      116113\n 7 2010-11 50-64 Years             44.5     43.9     45.1      128820\n 8 2010-11 &gt;=65 Years              66.6     66       67.2      132636\n 9 2010-11 &gt;=6 Months              43       42.6     43.4      494368\n10 2011-12 6 Months - 17 Years     51.5     50.5     52.5       96254\n# ℹ 67 more rows\n\n\n\nnational_age_plot"
+  },
+  {
+    "objectID": "cdcdata_exercise/cdcdata_exercise.html#state-estimates",
+    "href": "cdcdata_exercise/cdcdata_exercise.html#state-estimates",
+    "title": "CDC Data Processing Exercise",
+    "section": "State estimates",
+    "text": "State estimates\nState records are identified using two-character FIPS codes. The summary describes the median and interquartile range across reporting states.\n\nstate_season_summary\n\n# A tibble: 15 × 5\n   season  states_reported median_estimate    q1    q3\n   &lt;chr&gt;             &lt;int&gt;           &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1 2009-10              51            43    40.0  46.0\n 2 2010-11              51            45    41.8  46.8\n 3 2011-12              51            43.7  40.2  46.2\n 4 2012-13              51            46.5  42.0  49.5\n 5 2013-14              49            47.3  42.9  50  \n 6 2014-15              51            48.8  44.6  51.4\n 7 2015-16              51            46.9  43.4  49.4\n 8 2016-17              51            47.2  43.4  50.1\n 9 2017-18              50            43    39.9  46.2\n10 2018-19              49            49.9  46.8  52.1\n11 2019-20              51            52.8  49.7  56.4\n12 2020-21              51            53    48.3  57.2\n13 2021-22              51            51.7  47.4  55.6\n14 2022-23              51            49.8  43.6  53.8\n15 2024-25              51            43.3  39.2  48.0\n\n\n\nstate_distribution_plot"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Yangyin Zeng",
     "section": "",
-    "text": "I am studying biology and learning how to use R, Quarto, GitHub, and reproducible workflows to turn biological questions into clear data stories.\n\nAbout me View latest project"
+    "text": "I am studying biology and learning how to use R, Quarto, GitHub, and reproducible workflows to turn biological questions into clear data stories.\n\nAbout me View current project"
   },
   {
     "objectID": "index.html#portfolio-focus",
@@ -144,6 +186,6 @@
     "href": "index.html#current-work",
     "title": "Yangyin Zeng",
     "section": "Current Work",
-    "text": "Current Work\n\n\nComplex Data Type Analysis\nA Quarto exercise using Biostrings to read immune-related protein FASTA sequences, calculate sequence lengths and amino acid composition, group residues by simple properties, and make exploratory plots.\nOpen project View source file\n\n\nStarter Analysis Exercise\nA beginner R analysis using the gapminder data from dslabs to explore relationships between life expectancy, infant mortality, and population in African countries.\nOpen project View source file"
+    "text": "Current Work\n\n\nCDC Data Processing Exercise\nAn analysis of CDC influenza vaccination coverage that cleans and validates more than 235,000 observations, examines missing data, and compares end-of-season coverage across age groups, flu seasons, and states.\nOpen project\n\n\nComplex Data Type Analysis\nA Quarto exercise using Biostrings to read immune-related protein FASTA sequences, calculate sequence lengths and amino acid composition, group residues by simple properties, and make exploratory plots.\nOpen project View source file\n\n\nStarter Analysis Exercise\nA beginner R analysis using the gapminder data from dslabs to explore relationships between life expectancy, infant mortality, and population in African countries.\nOpen project View source file"
   }
 ]
