@@ -1,6 +1,6 @@
 ---
 title: "Complex Data Type Exercise: Immune Protein Sequences"
-subtitle: "A beginner-friendly Biostrings analysis of FASTA protein data"
+subtitle: "A Biostrings analysis of FASTA protein data"
 format:
   html:
     toc: true
@@ -52,7 +52,7 @@ library(ggplot2)
 # database such as UniProt or NCBI.
 #
 # For this exercise, we create a small FASTA file ourselves. This makes the
-# exercise reproducible because everyone starts with the same input file.
+# exercise reproducible (pretty important for the ready workflow lol) because everyone starts with the same input file.
 
 fasta_file <- "immune_protein_fragments.fasta"
 
