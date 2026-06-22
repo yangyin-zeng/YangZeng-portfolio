@@ -51,6 +51,7 @@ I am building skills in data cleaning, visualization, version control, and commu
 An analysis of CDC influenza vaccination coverage that cleans and validates more than 235,000 observations, examines missing data, and compares end-of-season coverage across age groups, flu seasons, and states.
 
 [Open project](cdcdata_exercise/cdcdata_exercise.Rmd){.project-link}
+[View source file](https://github.com/yangyin-zeng/YangZeng-portfolio/blob/main/cdcdata_exercise/cdcdata_exercise.R){.project-link}
 :::
 
 ::: {.project-card}
